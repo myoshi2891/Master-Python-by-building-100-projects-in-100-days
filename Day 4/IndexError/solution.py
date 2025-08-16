@@ -7,7 +7,7 @@ states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Conne
                      "New Mexico", "Arizona", "Alaska", "Hawaii"]
 
 print(states_of_america[49])  # No error
-print(states_of_america[50])  # IndexError
+# print(states_of_america[50])  # IndexError
 
 # Using len() to find the number of items in a List
 num_states = len(states_of_america)
