@@ -1,8 +1,11 @@
+from typing import Dict
+
+
 class MoneyMachine:
 
-    CURRENCY = "$"
+    CURRENCY: str = "$"
 
-    COIN_VALUES = {
+    COIN_VALUES: Dict[str, float] = {
         "quarters": 0.25,
         "dimes": 0.10,
         "nickles": 0.05,
@@ -10,21 +13,21 @@ class MoneyMachine:
     }
 
     def __init__(self):
-        self.profit = 0
-        self.money_received = 0
+        self.profit: float = 0
+        self.money_received: float = 0
 
-    def report(self):
+    def report(self) -> None:
         """Prints the current profit"""
         print(f"Money: {self.CURRENCY}{self.profit}")
 
-    def process_coins(self):
+    def process_coins(self) -> float:
         """Returns the total calculated from coins inserted."""
         print("Please insert coins.")
         for coin in self.COIN_VALUES:
             self.money_received += int(input(f"How many {coin}?: ")) * self.COIN_VALUES[coin]
         return self.money_received
 
-    def make_payment(self, cost):
+    def make_payment(self, cost: float) -> bool:
         """Returns True when payment is accepted, or False if insufficient."""
         self.process_coins()
         if self.money_received >= cost:
