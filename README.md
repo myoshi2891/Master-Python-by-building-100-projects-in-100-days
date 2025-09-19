@@ -204,3 +204,4 @@
 
 最高複雑度システム（誕生日メールシステムなど）は、教育的明確性と段階的学習パスを維持しながら、エンタープライズレベルのPython開発実践を実演します。
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/myoshi2891/Master-Python-by-building-100-projects-in-100-days)
