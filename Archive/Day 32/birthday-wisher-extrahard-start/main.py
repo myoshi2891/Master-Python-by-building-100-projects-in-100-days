@@ -17,7 +17,7 @@ my_mail = os.getenv("TEST_MAIL2", "")
 today = datetime.now()
 today_tuple = (today.month, today.day)
 
-data = pd.read_csv("birthdays.csv")
+data = pd.read_csv("birthdays.csv", index_col=0)
 birthday_dict = {}
 for index, row in data.iterrows():
     month = int(row.iloc[3])  # 2番目の列（month）
