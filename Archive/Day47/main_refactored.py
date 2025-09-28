@@ -26,7 +26,7 @@ def fetch_product_data(
 ) -> Optional[Tuple[float, str]]:
     """Fetches product price and title from the given URL."""
     try:
-        response = requests.get(url, headers=headers, timeout=10)
+        response = requests.get(url, headers=headers)
         response.raise_for_status()  # Raise an exception for bad status codes
     except requests.RequestException as e:
         print(f"Error fetching the URL: {e}")
